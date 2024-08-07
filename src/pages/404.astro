@@ -1,8 +1,8 @@
 ---
-import Global from "../layouts/Global.astro";
+import { Layout } from "@globals";
 ---
 
-<Global title="Página no encontrada (error 404)" , description="No se ha encontrado la página" keywords="">
+<Layout title="Página no encontrada (error 404)" , description="No se ha encontrado la página">
     <main>
         <div class="container">
             <img src="/favicon.svg" alt="Logo de Eduvers" class="logo" />
@@ -11,7 +11,7 @@ import Global from "../layouts/Global.astro";
             <button onclick="window.location.href = '/'" class="btn">Volver al inicio</button>
         </div>
     </main>
-</Global>
+</Layout>
 
 <style>
     body {

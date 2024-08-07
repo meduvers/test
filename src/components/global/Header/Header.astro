@@ -1,0 +1,57 @@
+---
+interface Props {
+  back: string;
+  title: string;
+  link: string;
+  button: string;
+}
+
+const { back, title, link, button } = Astro.props;
+---
+
+<header>
+  <nav class="container">
+    <div>
+      <button onclick={`location.href='${back}';`} class="btn" aria-label="atras">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="currentColor" class="icon">
+          <path fill="currentColor" d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"></path>
+        </svg>
+      </button>
+    </div>
+    <div>
+      <h1 class="heading">{title}</h1>
+    </div>
+    <div class="right">
+      <a href={link} target="_blank" class="btn">{button}</a>
+    </div>
+  </nav>
+</header>
+
+<style>
+  header {
+    background-color: var(--color);
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .icon {
+    height: 2rem;
+  }
+
+  .heading {
+    padding-inline: 6px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .right {
+    margin-left: auto;
+  }
+</style>

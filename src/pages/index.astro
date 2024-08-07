@@ -4,64 +4,262 @@ import { Layout } from "@globals"
 ---
 
 <Layout title="Astro PWA Starter">
-	<section class="p-6 flex-1 flex flex-col justify-between">
-		<!-- Welcome -->
-		<div
-			class="max-w-xl mx-auto flex flex-col justify-center flex-1 space-y-10"
-		>
-			<div class="space-y-2 text-center">
-				<h1 class="text-4xl font-semibold">🟢 astro-pwa-starter</h1>
-				<p class="italic">
-					It works! Check out <span class="p-1 rounded-lg bg-gray-100 font-mono"
-						>/src/pages</span
-					> to get started.
-				</p>
-			</div>
-			<div>
-				<ul class="grid md:grid-cols-2 gap-4">
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-getting-started-guide"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">🚀 Getting started guide</span>
-						</a>
-					</li>
-					<li>
-						<a
-							href="https://github.com/shaunchander/astro-pwa-starter#-documentation"
-							class="p-6 rounded-2xl border border-gray-500 flex flex-col text-center hover:bg-blue-500 focus:bg-blue-500 hover:text-white duration-300 ease-in-out transition hover:border-blue-500 focus:border-blue-500"
-						>
-							<span class="text-xl font-medium">📖 Documentation</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+	<header>
+		<nav class="container">
+		  <div class="logo">
+			<img src="/favicon.svg" alt="eduvers logo">
+		  </div>
+		  <div class="right">
+			<button class="btn" onclick="location.href='/aprender';">Aprender</button>
+			<button class="btn" onclick="location.href='/compartir';">Compartir</button>
+			<button class="btn" onclick="location.href='/contribuir';">Contribuir</button>
+		  </div>
+		</nav>
+	  </header>
 
-		<!-- Twitter -->
-		<div class="flex justify-center">
-			<a
-				href="https://twitter.com/shaunchander"
-				target="_blank"
-				rel="noopener noreferrer"
-				class="relative inline-flex items-center rounded-full bg-gray-100 p-4 transition duration-300 ease-in-out hover:-translate-y-2 focus:-translate-y-2 group hover:text-white focus:text-white"
-			>
-				<div class="flex items-center space-x-4 relative z-10">
-					<img
-						src="https://pbs.twimg.com/profile_images/1626068871034667008/tc7dNg2B_400x400.jpg"
-						width={48}
-						height={48}
-						class="rounded-full object-cover"
-						alt=""
-					/>
-					<span class="text-lg font-bold">Built by @shaunchander</span>
-				</div>
-				<div
-					class="inline-block rounded-full absolute inset-0 bg-gradient-to-tr from-[#07f49e] to-[#42047e] opacity-0 group-hover:opacity-100 group-focus:opacity-100 duration-300 ease-in-out transition"
-				>
-				</div>
-			</a>
-		</div>
-	</section>
+      <main>
+        <section>
+            <h1>¡Bienvenido a <strong style="color: var(--color)">eduvers</strong>!</h1>
+            <div class="intro">
+                <div>
+                    <p>Descubre un mundo donde aprender se convierte en una <strong>aventura sin límites</strong>.</p>
+                    <p>¡<strong>Comparte tu conocimiento</strong> y enriquece a una comunidad de apasionados por el aprendizaje!</p>
+                    <p>¡<strong>Colabora</strong> y mejora los recursos educativos para construir un futuro mejor juntos!</p>
+                </div>
+                <div>
+                    <img src="/smile.png" alt="Imagen educativa">
+                </div>
+            </div>
+        </section>
+        <section id="asignaturas">
+            <h2>Descubre y aprende a tu ritmo</h2>
+            <p>Pronto habrá más asignaturas. ¡Únete y colabora para hacerlo posible!</p>
+            <div id="cards">
+                <button onclick="window.location.href = '/es/fisica-quimica'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-rocket-takeoff-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M12.17 9.53c2.307-2.592 3.278-4.684 3.641-6.218.21-.887.214-1.58.16-2.065a3.6 3.6 0 0 0-.108-.563 2 2 0 0 0-.078-.23V.453c-.073-.164-.168-.234-.352-.295a2 2 0 0 0-.16-.045 4 4 0 0 0-.57-.093c-.49-.044-1.19-.03-2.08.188-1.536.374-3.618 1.343-6.161 3.604l-2.4.238h-.006a2.55 2.55 0 0 0-1.524.734L.15 7.17a.512.512 0 0 0 .433.868l1.896-.271c.28-.04.592.013.955.132.232.076.437.16.655.248l.203.083c.196.816.66 1.58 1.275 2.195.613.614 1.376 1.08 2.191 1.277l.082.202c.089.218.173.424.249.657.118.363.172.676.132.956l-.271 1.9a.512.512 0 0 0 .867.433l2.382-2.386c.41-.41.668-.949.732-1.526zm.11-3.699c-.797.8-1.93.961-2.528.362-.598-.6-.436-1.733.361-2.532.798-.799 1.93-.96 2.528-.361s.437 1.732-.36 2.531Z" />
+                        <path
+                            d="M5.205 10.787a7.6 7.6 0 0 0 1.804 1.352c-1.118 1.007-4.929 2.028-5.054 1.903-.126-.127.737-4.189 1.839-5.18.346.69.837 1.35 1.411 1.925" />
+                    </svg>
+                    <strong>Física y Química:</strong> Explora los misterios del universo.
+                </button>
+                <button onclick="window.location.href = '/es/matematicas'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-calculator-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm2 .5v2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 0-.5-.5h-7a.5.5 0 0 0-.5.5m0 4v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M4.5 9a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 12.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5M7.5 6a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM7 9.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM10 6.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5m.5 2.5a.5.5 0 0 0-.5.5v4a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-.5-.5z" />
+                    </svg>
+                    <strong>Matemáticas:</strong> Domina el lenguaje de la lógica y el razonamiento.
+                </button>
+                <button onclick="window.location.href = '/es/biologia-geologia'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-tree-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8.416.223a.5.5 0 0 0-.832 0l-3 4.5A.5.5 0 0 0 5 5.5h.098L3.076 8.735A.5.5 0 0 0 3.5 9.5h.191l-1.638 3.276a.5.5 0 0 0 .447.724H7V16h2v-2.5h4.5a.5.5 0 0 0 .447-.724L12.31 9.5h.191a.5.5 0 0 0 .424-.765L10.902 5.5H11a.5.5 0 0 0 .416-.777z" />
+                    </svg>
+                    <strong>Biología y Geología:</strong> Explora la vida y la Tierra desde sus cimientos.
+                </button>
+            </div>
+        </section>
+        <section id="comparte">
+            <h2>Colabora para mejorar la educación</h2>
+            <p>Únete a nuestra misión de compartir conocimiento. Sube tus propios materiales y ayuda a otros a aprender.
+                ¡Juntos, podemos hacer la diferencia!</p>
+            <button class="btn" onclick="window.location.href = '/compartir'">Comparte tus materiales</button>
+            <button class="btn" onclick="window.location.href = '/contribuir'">Crea nuevos materiales</button>
+        </section>
+        <section id="instala">
+            <h2>Instala Nuestra Aplicación</h2>
+            <div class="app-info">
+                <div>
+                    <p>Disfruta de la educación en la palma de tu mano. Instala nuestra <strong>Progressive Web App</strong>
+                        ahora y próximamente también en las tiendas de aplicaciones.</p>
+                    <button class="btn"
+                        onclick="window.location.href = 'https://web.dev/articles/install-criteria'">Consigue nuestra app</button>
+                </div>
+                <div>
+                    <img src="/app.png" alt="Imagen de la aplicación">
+                </div>
+            </div>
+        </section>
+        <section id="contacto">
+            <h2>Síguenos y mantente actualizado</h2>
+            <p>Síguenos en nuestras redes sociales y mantente al día con las últimas novedades.</p>
+            <div id="icons">
+                <a href="mailto:contacto@eduvers.com" area-label="mail">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=""
+                        class="bi bi-envelope-at" viewBox="0 0 16 16">
+                        <path
+                            d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2zm3.708 6.208L1 11.105V5.383zM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2z" />
+                        <path
+                            d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648m-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z" />
+                    </svg>
+                </a>
+                <a href="https://twitter.com/eduvers" area-label="x">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=""
+                        class="bi bi-twitter-x" viewBox="0 0 16 16">
+                        <path
+                            d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                    </svg>
+                </a>
+                <a href="https://wa.me/123456789" area-label="whatsapp">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill=""
+                        class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+        <footer>
+        <p> eduvers&copy;</p>
+    </footer>
 </Layout>
+
+<style>
+    header {
+    background-color: var(--color);
+    padding: 0.5rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav .btn {
+    font-size: larger;
+}
+
+header img {
+    height: 60px;
+}
+
+/* main */
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+main button {
+    margin: 5px;
+}
+
+.intro,
+.app-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.intro img,
+.app-info img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    text-wrap: balance;
+}
+
+#cards {
+    display: flex;
+    flex-wrap: wrap;
+    /* Para que los botones se envuelvan a la siguiente línea cuando no haya espacio suficiente */
+    justify-content: center;
+    /* Para centrar los botones horizontalmente */
+    gap: 0.6rem;
+}
+
+#cards button {
+    display: grid;
+    gap: 0.6rem;
+    align-items: center;
+    justify-items: center;
+    max-width: 300px;
+    width: 100%;
+    /* Asegura que los botones ocupen todo el ancho disponible */
+    padding: 1.2rem 1.4rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background-color: var(--color);
+    color: var(--light);
+    border: 0;
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+}
+
+#cards button:hover {
+    background-color: var(--color-dark);
+}
+
+#cards button svg {
+    fill: var(--light);
+    width: 40px;
+    height: 40px;
+}
+
+#icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    fill: var(--color);
+}
+
+#icons svg {
+    width: 40px;
+    height: 40px;
+}
+
+#icons a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#icons a:hover {
+    transform: scale(1.2) translateY(-5px);
+    fill: var(--color-dark);
+}
+
+footer {
+    background: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+    margin: auto;
+    margin-top: 1rem;
+}
+
+/* Responsive Header */
+@media (max-width: 425px) {
+    header nav {
+        flex-direction: column;
+        margin: 0.5rem 0;
+    }
+}
+</style>
